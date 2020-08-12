@@ -1,0 +1,14 @@
+body {
+    background:	#F0F0F0;
+    color:black;
+    padding-left: 120px;
+    
+}
+.leftcolumn { 
+    margin-top: 0;
+    float: left;
+    width: 70%;
+    padding-left: 12px;
+    box-sizing: border-box; 
+    background: orange;
+  }
