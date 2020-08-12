@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的計數器</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <hi>
+
+
+
+
+        <div id="app">
+            <h1>{{ message }}</hi>
+            
+            <p><input v-model="ans"></input> </p>
+            
+            <button type="button" class="btn btn-primary" v-on:click="shownum('7')" >7</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('8')"  >8</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('9')" >9</button> 
+            <button type="button" class="btn btn-info" v-on:click="shownum('/')" >/</button> <br>
+            <button type="button" class="btn btn-primary" v-on:click="shownum('4')" >4</button>
+            <button type="button" class="btn btn-primary" v-on:click="shownum('5')" >5</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('6')" >6</button>
+            <button type="button" class="btn btn-info" v-on:click="shownum('*')" >*</button><br>
+            <button type="button" class="btn btn-primary" v-on:click="shownum('1')" >1</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('2')" >2</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('3')" >3</button>
+            <button type="button" class="btn btn-info" v-on:click="shownum('-')" >-</button><br>
+            <button type="button" class="btn btn-primary" v-on:click="shownum('0')" >0</button> 
+            <button type="button" class="btn btn-primary" v-on:click="shownum('.')" >.</button> 
+            <button type="button" class="btn btn-info" v-on:click="shownum('+')" >+</button>
+            <button type="button" class="btn btn-warning" v-on:click="show">=</button>
+            <button type="button" class="btn btn-success" v-on:click="reset">Reset</button> 
+
+
+          </div>
+          <script>
+
+        var app = new Vue({
+        el: '#app',
+        data: {
+         message: '我的計算機',
+         a:"1",
+         ans:" ",
+         step:" ",
+        },
+        methods: {
+            show: function(){
+                this.ans = eval(this.ans);
+
+            },
+            
+
+            
+            reset: function(){
+                this.ans =" ";
+
+            },
+            shownum: function(n){
+                this.ans += n;
+            }
+            
+
+        }
+        
+        
+        })
+          </script>
+
+    </body>
+
+    </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的計數器</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+        <hi>
+
+
+
+
+        <div id="app">
+            <h1>{{ message }}</hi>
+            <h1 style="color:red">{{ans}}</h1>
+            <p>Input number: <input v-model="step" ></input></p>
+            <button v-on:click="plusN">+{{step}}</button> 
+            <button v-on:click="less">-1</button> 
+            <button v-on:click="reset">Reset</button> 
+
+
+          </div>
+          <script>
+
+        var app = new Vue({
+        el: '#app',
+        data: {
+         message: '我的計數器',
+         ans:0,
+         step:0,
+        },
+        methods: {
+            plusN: function(){
+                this.ans += parseInt(this.step);
+
+            },
+            less: function(){
+                this.ans -=1;
+
+            },
+            reset: function(){
+                this.ans =0;
+
+            },
+            
+
+        }
+        
+        
+        })
+          </script>
+
+    </body>
+
+    </html>
